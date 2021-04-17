@@ -1,4 +1,4 @@
-package com.example.tmie;
+package com.example.tmie.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.tmie.R;
 import com.example.tmie.fragment.FragCourse;
 import com.example.tmie.fragment.FragCompany;
 import com.example.tmie.fragment.FragSupport;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    // 홈 화면(약속 목록)으로 이동
+                    // 홈 화면으로 이동
                     case R.id.menu_home:
                         FragHome fragHome = new FragHome();
                         getSupportFragmentManager().beginTransaction()

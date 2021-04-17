@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:gravity="center"
+                android:text="등록" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/post_scroll"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/post_bottom_tool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="제목을 입력해주세요."
+            android:inputType="text"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/edit_body"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:gravity="top"
+            android:hint="내용을 입력해주세요." />
+    </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/post_bottom_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_gallery"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/gallery"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/camera"
+            android:layout_gravity="center"
+            />
+        <Button
+            android:id="@+id/btn_file"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/folder"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -6,24 +6,138 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-
-    <FrameLayout
-        android:id="@+id/main_frame"
+    <include
+        layout="@layout/view_toolbar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottomNavi"
-        android:layout_alignParentTop="true"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="wrap_content" />
 
-        <TextView
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_below="@id/toolbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="게시판 화면"
-            android:textSize="24sp" />
-    </FrameLayout>
-
+            android:stretchColumns="*">
+            <TableRow>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/board_book"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:clickable="true">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/board_book"
+                    />
+                <TextView
+                    android:layout_below="@+id/board_book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="책방"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/board_freeboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/board_freeboard"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="자유게시"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/board_college"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/board_college"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="대학생"/>
+            </LinearLayout>
+            </TableRow>
+            <TableRow>
+            <LinearLayout
+                android:id="@+id/board_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/board_job"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="취업및진로"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/board_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/board_notice"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="공지 게시판"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/board_shareInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/board_shareinfo"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="정보공유"/>
+            </LinearLayout>
+            </TableRow>
+            <TableRow>
+                <LinearLayout
+                    android:id="@+id/board_homework"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/board_homework"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="과제"/>
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
 
 </RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/action_settings"
+        android:title=""
+        app:showAsAction="ifRoom"/>
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings2"
+        android:title="쪽지보내기"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_settings3"
+        android:title="신고하기"
+        app:showAsAction="never"/>
+
+</menu>
